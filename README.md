@@ -225,8 +225,7 @@ Allows setting multiple background properties in one declaration.
 Example:
 ```css
 .class {
-   background: red url('img.png') no-repeat fixed right top;
-   /*        color  image          repeat   attachment  position */
+   background: red url('img.png') no-repeat fixed right top; /* color, image, repeat, attachment, position */
 }
 ```
 One or more properties can be omitted as long as the order is maintained.
@@ -724,7 +723,7 @@ list-style: square inside;
 • Item 3
 ```
 
-### List-Style Property
+### The List-Style Shorthand Property
 
 The `list-style` property is a shorthand for setting `list-style-type`, `list-style-position`, and `list-style-image`.
 

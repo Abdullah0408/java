@@ -16,7 +16,7 @@ HTML (HyperText Markup Language) is the standard language for creating websites.
 ## Setting Up Your Environment
 To begin working with HTML, you can use any text editor. Here's how to set up using VS Code:
 
-  1. **Installing VS Code**: Download this lightweight, open-source text editor from Microsoft. Search "VS Code" on Google to find and download it.
+  1. **Installing VS Code**: Download this lightweight, open-source text editor from Microsoft. Search "VS Code" on Google to find and download it.   1
 
 ### Note:
 HTML can be written in any text editor, including Notepad.
@@ -66,9 +66,9 @@ Comments in HTML are used to mark text which should not be parsed. They can help
 HTML is case insensitive. `<H1>` and `<h1>` are the same.
 
 ## Practice
-- **Inspect Element**: Inspect your favorite website and change something on the page.
-- **View Source**: View the page source of your favorite website and write the exact lines of code. Does it clone the website? Why or why not?
-- **Write HTML**: Write HTML code inside a text file using Notepad. Does it work if you open the file in a web browser?
+1. **Inspect Element**: Inspect your favorite website and change something on the page.
+2. **View Source**: View the page source of your favorite website and write the exact lines of code. Does it clone the website? Why or why not?
+3. **Write HTML**: Write HTML code inside a text file using Notepad. Does it work if you open the file in a web browser?
 
 By understanding these basics and how to put them together, you can start creating beautiful websites easily!
 
@@ -480,13 +480,13 @@ Used to list ordered items.
 
 ### Form Elements
 
-- Text Input: `<input type="text">`
-- Checkbox: `<input type="checkbox">`
-- Radio Button: `<input type="radio">`
-- Button: `<input type="button">`
-- Submit: `<input type="submit">`
-- Textarea: `<textarea></textarea>`
-- Dropdown: `<select><option>Option 1</option></select>`
+- **Text Input**: `<input type="text">`
+- **Checkbox**: `<input type="checkbox">`
+- **Radio Button**: `<input type="radio">`
+- **Button**: `<input type="button">`
+- **Submit**: `<input type="submit">`
+- **Textarea**: `<textarea></textarea>`
+- **Dropdown**: `<select><option>Option 1</option></select>`
 
 ## Embedding Video
 

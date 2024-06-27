@@ -444,7 +444,7 @@ Used to list ordered items.
 </table>
 ```
 
-**Diagram**:
+### Diagram:
 ```
 +-------------------+-------------------+
 |      Cell 1       |      Cell 2       |

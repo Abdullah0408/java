@@ -239,4 +239,316 @@ One or more properties can be omitted as long as the order is maintained.
 4. Create a vertical box and add a fixed, non-scrolling background to it.
 5. Verify that the `background` shorthand property works with some of the values skipped.
 
+### Chapter 3 – CSS Box Model
+
+The CSS box model treats all HTML elements as boxes.
+
+```
++-------------------------------+
+|         Margin Area           |
+|  +-------------------------+  |
+|  |       Border Area       |  |
+|  |  +-------------------+  |  |
+|  |  |    Padding Area   |  |  |
+|  |  |  +-------------+  |  |  |
+|  |  |  |   Content   |  |  |  |
+|  |  |  +-------------+  |  |  |
+|  |  +-------------------+  |  |
+|  +-------------------------+  |
++-------------------------------+
+```
+
+### Setting Width & Height
+
+You can set the width and height of an element in CSS as follows:
+
+```css
+.class {
+   width: 100px;
+   height: 100px;
+}
+```
+
+**Note:** The total width/height is calculated as:
+```
+total width/height = width/height + left & right/top & bottom padding + left & right/top & bottom border + left & right/top & bottom margin
+```
+
+### Setting Margin & Padding
+
+Margins and padding can be set in several ways:
+
+```css
+.class {
+   margin: 100px;      /* sets top, bottom, left, and right values */
+   padding: 100px;
+}
+```
+
+For individual sides:
+
+```css
+.class {
+   margin: 1px 2px 3px 4px;  /* top, right, bottom, left */
+}
+```
+
+or:
+
+```css
+.class {
+   margin: 2px 4px;  /* top & bottom, left & right */
+}
+```
+
+You can also set individual margins/paddings:
+
+```css
+.class {
+   margin-top: 10px;
+   margin-bottom: 10px;  /* same goes for padding */
+   margin-left: 20px;
+   margin-right: 20px;
+}
+```
+
+### Setting Borders
+
+Borders can be set as follows:
+
+```css
+.class {
+   border-width: 3px;
+   border-style: solid;
+   border-color: blueviolet;
+}
+```
+
+or using shorthand:
+
+```css
+.class {
+   border: 3px solid blueviolet;  /* shorthand */
+}
+```
+
+### Border Radius
+
+To create rounded borders:
+
+```css
+.class {
+   border-radius: 7px;
+}
+```
+
+### Margin Collapse
+
+When two margins from different elements overlap, the resulting margin is the greater of the two. This is called margin collapse.
+
+Example:
+```
++------------------+
+|      .box1       |
++------------------+
+|                  |  Collapsed Margin (30px)
+|                  |  The larger of .box1's bottom margin (30px)
+|                  |  and .box2's top margin (20px)
++------------------+
+|      .box2       |
++------------------+
+```
+
+### Box Sizing
+
+Determines what parts of the box (padding and border) are included in the element's width and height. 
+
+- **content-box:** (default) Includes only content in width/height.
+- **border-box:** Includes content, padding, and border in width/height.
+
+```css
+.class {
+   box-sizing: border-box; /* width and height include content, padding, and border */
+}
+```
+
+### Chapter 3 – Practice Set
+
+1. Create a website layout with a header box, one content box, and a footer.
+2. Add borders and margin to one of the boxes.
+3. Check if the margin collapses between the content box and the footer.
+4. Add the `box-sizing` property to the content box and note any changes.
+
+### Chapter 4 – Font & Display
+
+In this chapter, we'll explore the `display` property and various font-related properties in CSS to enhance the look and feel of a website.
+
+### The `display` Property
+
+The CSS `display` property determines how an element is displayed on the page, whether as a block, inline element, or other layout types like flexbox or grid.
+
+#### `display: inline`
+
+An inline element takes only the space required by the content, without line breaks before or after it. Width, height, margin, and vertical padding are generally ignored.
+
+```css
+.inline-element {
+   display: inline;
+   background-color: lightblue;
+   padding: 10px 20px; /* Only horizontal padding affects layout */
+   margin: 10px 20px;  /* Only horizontal margin affects layout */
+   width: 100px;       /* Ignored */
+   height: 50px;       /* Ignored */
+}
+```
+
+#### `display: block`
+
+A block element takes the full width available and leaves a newline before and after it.
+
+```css
+.block-element {
+   display: block;
+}
+```
+
+#### `display: inline-block`
+
+An inline-block element is similar to an inline element, but allows setting width, height, margin, and padding. Elements can sit next to each other.
+
+```css
+.inline-block-element {
+   display: inline-block;
+   width: 100px;
+   height: 50px;
+   margin: 10px;
+   padding: 10px;
+}
+```
+
+#### `display: none` vs `visibility: hidden`
+
+- **`display: none`:** The element is removed from the document flow, and its space is not reserved.
+- **`visibility: hidden`:** The element is hidden, but its space is still reserved.
+
+### `text-align` Property
+
+The `text-align` property sets the horizontal alignment of text within an element.
+
+```css
+.text-center {
+   text-align: center;
+}
+```
+
+### `text-decoration` Property
+
+The `text-decoration` property is used to decorate the text, such as adding an underline, overline, or line-through.
+
+```css
+.underline {
+   text-decoration: underline;
+}
+```
+
+### `text-transform` Property
+
+The `text-transform` property specifies the capitalization of text.
+
+```css
+.uppercase {
+   text-transform: uppercase;
+}
+```
+
+### `line-height` Property
+
+The `line-height` property sets the space between lines of text.
+
+```css
+.spacing {
+   line-height: 1.5;
+}
+```
+
+### Fonts
+
+Fonts play a crucial role in the look and feel of a website.
+
+#### `font-family`
+
+The `font-family` property specifies the font of the text and can hold multiple values as a fallback system.
+
+```css
+.font-example {
+   font-family: Arial, Helvetica, sans-serif;
+}
+```
+
+#### Web Safe Fonts
+
+Web safe fonts are universally installed across browsers, ensuring consistency.
+
+#### Adding Google Fonts
+
+To use custom Google Fonts, go to Google Fonts, select a style, and paste the provided link into the `<head>` section of your HTML. Then, use the font in your CSS.
+
+```html
+<!-- Example of adding Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+```
+
+```css
+body {
+   font-family: 'Roboto', sans-serif;
+}
+```
+
+#### Other Font Properties
+
+- **`font-size`:** Sets the size of the font.
+  ```css
+  .large-text {
+     font-size: 20px;
+  }
+  ```
+
+- **`font-style`:** Sets the font style (e.g., italic).
+  ```css
+  .italic-text {
+     font-style: italic;
+  }
+  ```
+
+- **`font-weight`:** Sets the weight of the font (e.g., bold).
+  ```css
+  .bold-text {
+     font-weight: bold;
+  }
+  ```
+
+- **`font-variant`:** Sets whether text is displayed in small-caps.
+  ```css
+  .small-caps {
+     font-variant: small-caps;
+  }
+  ```
+
+### Generic Font Families
+
+Generic families are broad classes of similar fonts, such as serif or sans-serif. The `font-family` property can specify both specific and generic font families.
+
+```css
+body {
+   font-family: 'Times New Roman', Times, serif; /* Specific and generic families */
+}
+```
+
+### Chapter 4 – Practice Set
+
+1. Create a navigation bar with inline elements.
+2. Create a footer with block elements.
+3. Create a text box with a specific font family and a fallback font.
+4. Use Google Fonts for custom typography on your website.
+5. Experiment with different `display` properties and note the changes in layout.
 

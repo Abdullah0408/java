@@ -130,4 +130,113 @@ Comments are ignored by the browser and used to add notes within the CSS.
 4. Create multiple CSS classes and apply them to the same element to verify they work together.
 5. Refer to the [MDN CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) and experiment with various CSS properties and values.
 
+### Chapter 2 – Colors & Backgrounds
+
+CSS rules consist of simple key-value pairs with selectors. In this chapter, we'll explore how to change colors and set backgrounds using CSS.
+
+### The `color` Property
+
+The CSS `color` property sets the text color inside an element. It can be used to specify colors for various elements.
+
+### Types of Color Values
+
+Here are the most commonly used color values in CSS:
+
+- **RGB:** Specifies color using red, green, and blue values.
+  ```css
+  color: rgb(163, 70, 44); /* Example */
+  ```
+
+- **HEX Code:** Specifies color using hexadecimal code.
+  ```css
+  color: #ff0019; /* Example */
+  ```
+
+- **HSL Code:** Specifies color using hue, saturation, and lightness values.
+  ```css
+  color: hsl(67, 78%, 87%); /* Example */
+  ```
+  - **HSL:** `hue`, `saturation`, `lightness`
+
+**Note:** There are also RGBA and HSLA values for color, which include an alpha value representing opacity. These are less commonly used by beginners.
+- **RGBA:** `rgb(red, green, blue, alpha)`
+- **HSLA:** `hsl(hue, saturation, lightness, alpha)`
+
+### The `background-color` Property
+
+The CSS `background-color` property specifies the background color of an element.
+
+Example:
+```css
+.class {
+   background-color: greenyellow;
+}
+```
+
+### The `background-image` Property
+
+This property sets an image as the background of an element.
+
+Example:
+```css
+.class {
+   background-image: url('img.png');
+}
+```
+The image repeats by default in both the x and y directions.
+
+### The `background-repeat` Property
+
+Controls the repetition of the background image.
+
+Examples:
+- `repeat-x`: Repeats the background image horizontally.
+- `repeat-y`: Repeats the background image vertically.
+- `no-repeat`: Does not repeat the background image.
+
+For more possible values, refer to the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat).
+
+### The `background-size` Property
+
+Defines the size of the background image.
+
+Examples:
+- `cover`: Scales the image to cover the element, no empty space.
+- `contain`: Scales the image to be fully visible within the element.
+- `auto`: Displays the image in its original size.
+- `{width or height}`: Sets width, and the height is set automatically (or vice versa).
+- `{width, height}`: Sets both width and height.
+
+### The `background-attachment` Property
+
+Specifies whether the background image is fixed or scrolls with the rest of the page.
+
+Example:
+```css
+.class {
+   background-attachment: fixed;
+}
+```
+
+### The `background` Shorthand Property
+
+Allows setting multiple background properties in one declaration.
+
+Example:
+```css
+.class {
+   background: red url('img.png') no-repeat fixed right top;
+   /*        color  image          repeat   attachment  position */
+}
+```
+One or more properties can be omitted as long as the order is maintained.
+
+### Chapter 2 – Practice Set
+
+1. Create a dark blue navigation bar with light-colored items.
+2. Change the background color of the main container on your page to dark red.
+3. Create a `div` and add a background image with specified width and height.
+4. Create a vertical box and add a fixed, non-scrolling background to it.
+5. Verify that the `background` shorthand property works with some of the values skipped.
+
 

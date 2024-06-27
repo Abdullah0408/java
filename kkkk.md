@@ -425,9 +425,9 @@ Used to list ordered items.
 - **`<table>`**: Defines a table.
 - **`<caption>`**: Optional element for providing a caption to the table.
 - **`<thead>`**: The header section of the table, typically containing column headers (`<th>` elements).
-- **`<th>`**: Defines a header cell within the `<thead>`, typically used for column headings.
-- **`<tbody>`**: The body section of the table, containing the main content (`<tr>` elements).
 - **`<tr>`**: Defines a row in the table.
+- **`<tbody>`**: The body section of the table, containing the main content (`<tr>` elements).
+- **`<th>`**: Defines a header cell within the `<thead>`, typically used for column headings.
 - **`<td>`**: Defines a standard data cell within a `<tr>`, used for displaying data.
 
 ### Colspan and Rowspan

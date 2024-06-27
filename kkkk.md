@@ -16,7 +16,7 @@ HTML (HyperText Markup Language) is the standard language for creating websites.
 ## Setting Up Your Environment
 To begin working with HTML, you can use any text editor. Here's how to set up using VS Code:
 
-   **Installing VS Code**: Download this lightweight, open-source text editor from Microsoft. Search "VS Code" on Google to find and download it.
+  1. **Installing VS Code**: Download this lightweight, open-source text editor from Microsoft. Search "VS Code" on Google to find and download it.
 
 ### Note:
 HTML can be written in any text editor, including Notepad.

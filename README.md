@@ -552,3 +552,41 @@ body {
 4. Use Google Fonts for custom typography on your website.
 5. Experiment with different `display` properties and note the changes in layout.
 
+### Chapter 5 – Size, Position & Lists
+
+In this chapter, we'll discuss different units for sizing, positioning elements, and styling lists in CSS.
+
+### Size Units
+
+There are more units for describing size other than `px`. Some common ones include `rem`, `em`, `vw`, `vh`, and percentages.
+
+#### What's Wrong with Pixels?
+
+Pixels (`px`) are relative to the viewing device. For a device with a resolution of 1920x1080, 1px is 1 unit out of 1920 horizontally and 1080 vertically. This can make designs look inconsistent across different devices.
+
+#### Relative Lengths
+
+These units are relative to other length properties. Here are some commonly used relative lengths:
+
+- **em**: Unit relative to the parent element's font size. `1em` means "my parent element's font size."
+- **rem**: Unit relative to the root element's font size (usually the `<html>` tag).
+- **vw**: Unit relative to 1% of the viewport's width.
+- **vh**: Unit relative to 1% of the viewport's height.
+- **%**: Unit relative to the parent element's size.
+
+### Min/Max Height and Width Properties
+
+CSS has `min-height`, `max-height`, `min-width`, and `max-width` properties.
+
+- If the content is smaller than the minimum height, the minimum height will be applied.
+- Similarly, if the content is larger than the maximum height, the maximum height will be applied.
+
+### The `position` Property
+
+The `position` property is used to manipulate the location of an element. Here are the possible values:
+
+- **static**: The default position. `top`, `bottom`, `left`, `right`, and `z-index` have no effect.
+- **relative**: The element's position is adjusted relative to its normal position. `top`, `bottom`, `left`, and `right` will now work.
+- **absolute**: The element is removed from the document flow and positioned relative to its first non-static ancestor.
+- **fixed**: The element is positioned relative to the browser window and remains in place even when the page is scrolled.
+- **sticky**: The element is positioned based on the user's scroll position.

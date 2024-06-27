@@ -590,3 +590,42 @@ The `position` property is used to manipulate the location of an element. Here a
 - **absolute**: The element is removed from the document flow and positioned relative to its first non-static ancestor.
 - **fixed**: The element is positioned relative to the browser window and remains in place even when the page is scrolled.
 - **sticky**: The element is positioned based on the user's scroll position.
+
+### Z-Index Property
+
+The `z-index` property specifies the stack order of an element. It defines which layer will be above which in case of overlapping elements.
+
+**Example:**
+
+```css
+.element1 {
+   position: relative;
+   z-index: 10; /* Higher z-index, so it will be on top */
+}
+
+.element2 {
+   position: relative;
+   z-index: 5; /* Lower z-index, so it will be underneath element1 */
+}
+```
+
+### Z-Index Diagram:
+
+```
+Element with z-index: 10 (on top)
++------------------------+
+|       element1         |
++------------------------+
+
+Element with z-index: 5 (underneath)
++------------------------+
+|       element2         |
++------------------------+
+```
+
+### Chapter 5 – Practice Set
+
+1. Create a container with a minimum height and width and check the effect when the content size changes.
+2. Experiment with different `position` values and observe how elements are placed.
+3. Create a list with custom list styles.
+4. Use `z-index` to layer elements and observe the stacking order.

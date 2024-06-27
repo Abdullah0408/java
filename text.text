@@ -1,0 +1,260 @@
+# Introduction to HTML
+
+## What is HTML?
+
+**HTML (HyperText Markup Language)** is the standard language for creating websites. It structures a webpage and its content using a series of elements to define different parts of a webpage.
+
+### Why HTML, CSS, and JavaScript?
+
+- **HTML**: Defines the structure and layout of a webpage.
+- **CSS**: Adds styling to the HTML structure.
+- **JavaScript**: Adds interactivity and logic to the webpage.
+
+**Analogy**: 
+- **HTML**: The car body (only metal).
+- **CSS**: The car paint and decorations.
+- **JavaScript**: The car engine and interior logic.
+
+### Setting Up Your Environment
+
+- **Installing VS Code**: A lightweight, open-source text editor from Microsoft. Download from Google by searching "VS Code".
+- **Note**: HTML can be written in any text editor, including Notepad.
+
+## Chapter 1 – Creating Our First Website
+
+### Basic HTML Page Structure
+
+```html
+<!DOCTYPE html>  <!-- Specifies this is an HTML 5 document -->
+<html> <!-- Root element of the HTML page -->
+<head> <!-- Contains metadata about the document -->
+   <title>Document</title> <!-- Title of the document -->
+</head> <!-- Closing head tag -->
+<body> <!-- Main body of the page (rendered by the browser) -->
+  <h1>Hello</h1> <!-- Heading tag -->
+  <p>This is HTML</p> <!-- Paragraph tag -->
+</body> <!-- Closing body tag -->
+</html> <!-- HTML page ends here -->
+```
+
+### Important Notes
+
+- **Children and Parent Tags**: `<head>` and `<body>` are children of `<html>`. `<html>` is the parent of `<head>` and `<body>`.
+- **Element Structure**: Most HTML elements have opening and closing tags with content in between. Some tags like `<br>` are empty.
+- **Extensions**: You can use `.htm` or `.html` extensions.
+- **Viewing HTML**: Use “Inspect Element” or “View Page Source” in Chrome to view a website’s HTML code.
+
+### Comments in HTML
+
+```html
+<!-- This is a comment -->
+```
+
+### Case Sensitivity
+
+HTML is case insensitive. `<H1>` and `<h1>` are the same.
+
+### Practice
+
+1. Inspect your favorite website and change something on the page.
+2. View the page source of your favorite website and write the exact lines of code.
+3. Write HTML code inside a text file using Notepad. Does it work?
+
+## Chapter 2 – Basic HTML Tags
+
+### Elements and Attributes
+
+- **Element**: Everything from the starting tag to the ending tag.
+- **Attributes**: Add more information to an HTML tag.
+
+### Example:
+
+```html
+<a href="https://google.com/">Click here</a>
+<!-- <a> is the anchor tag, href is the attribute -->
+```
+
+### Common Tags
+
+- **Headings**: `<h1>...</h1>` to `<h6>...</h6>`
+- **Paragraph**: `<p>...</p>`
+- **Anchor**: `<a href="https://google.com/">Click here</a>`
+- **Image**: `<img src="image.jpg">`
+- **Text Formatting**: 
+  - Bold: `<b>this is bold</b>`
+  - Italic: `<i>this is italic</i>`
+  - Underline: `<u>this is underline</u>`
+- **Line Break**: `<br>`
+- **Horizontal Rule**: `<hr>`
+- **Subscript and Superscript**: 
+  - `<sub>this is subscript</sub>`
+  - `<sup>this is superscript</sup>`
+- **Preformatted Text**: `<pre>...</pre>`
+
+### Practice
+
+1. Create an HTML page with a heading, a primary heading, and a subheading.
+2. Create a page with 5 wallpaper images from the internet.
+3. Use `<br>` and `<hr>` tags to display text with line breaks.
+4. Write a chemical equation using HTML.
+5. Write a Wikipedia article using HTML.
+
+## Chapter 3 – Creating a Page Layout
+
+### Semantic Tags
+
+- **Header**: `<header>...</header>`
+- **Main**: `<main>...</main>`
+- **Footer**: `<footer>...</footer>`
+- **Section**: `<section>...</section>`
+- **Aside**: `<aside>...</aside>`
+- **Article**: `<article>...</article>`
+
+### Links and Navigation
+
+- **Basic Link**: `<a href="/contact.html">Contact us</a>`
+- **Open in New Tab**: `<a href="/contact.html" target="_blank">Contact us</a>`
+- **Link with Image**: `<a href="/about.html"><img src="image.jpg" width="120"></a>`
+
+### Containers
+
+- **Div Tag**: A block-level container. `<div>...</div>`
+- **Span Tag**: An inline container. `<span>...</span>`
+
+### Practice
+
+1. Create an SEO-friendly website using HTML.
+2. Create an HTML page that opens Google when an image is clicked.
+3. Create a website with bookmarks to your top 5 used websites, opening in a new tab.
+
+## Chapter 4 – Lists, Tables, and Forms
+
+### Lists
+
+- **Unordered List**: `<ul><li>Item</li></ul>`
+- **Ordered List**: `<ol><li>Item</li></ol>`
+
+### Tables
+
+- **Basic Table Structure**:
+
+```html
+<table>
+  <caption>Table Caption</caption>
+  <thead>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+- **Colspan and Rowspan**:
+
+```html
+<table border="1">
+  <tr>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell 3 (spans 2 columns)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Cell 4 (spans 2 rows)</td>
+    <td>Cell 5</td>
+  </tr>
+  <tr>
+    <td>Cell 6</td>
+  </tr>
+</table>
+```
+
+**Diagram**:
+
+```
++-------------------+-------------------+
+|      Cell 1       |      Cell 2       |
++-------------------+-------------------+
+|   Cell 3 (2 cols)                    |
++-------------------+-------------------+
+| Cell 4 (2 rows)   |      Cell 5       |
++-------------------+-------------------+
+|                  |      Cell 6       |
++-------------------+-------------------+
+```
+
+### Forms
+
+- **Basic Form Structure**:
+
+```html
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  <input type="submit" value="Submit">
+</form>
+```
+
+- **Form Elements**:
+  - Text Input: `<input type="text">`
+  - Checkbox: `<input type="checkbox">`
+  - Radio Button: `<input type="radio">`
+  - Button: `<input type="button">`
+  - Submit: `<input type="submit">`
+  - Textarea: `<textarea></textarea>`
+  - Dropdown: `<select><option>Option 1</option></select>`
+
+### Embedding Video
+
+- **Video Tag**: Used to embed a video file.
+
+```html
+<video src="video.mp4" controls width="400">Video not supported</video>
+```
+
+- **Common Attributes**:
+  - `controls`: Adds video controls (play, pause, etc.).
+  - `autoplay`: Automatically starts the video.
+  - `loop`: Loops the video.
+  - `width` and `height`: Set the dimensions of the video.
+
+- **Embedding YouTube Video**: Use an iframe to embed a YouTube video.
+
+```html
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+```
+
+### Practice
+
+1. Create an HTML page with an embedded video.
+2. Replace the video with a YouTube video.
+3. Create an HTML form for booking a vacation.
+4. Create a table displaying cricket players' scores.
+
+## Chapter 5 - SEO
+
+### Types of SEO
+
+- **On-page SEO**: Can be done by HTML developers.
+- **Off-page SEO**: Involves activities outside the website to improve search engine rankings.
+
+### HTML SEO Techniques
+
+- Set a concise and relevant title.
+- Add a meta description: `<meta name="description" content="...">`
+- Use appropriate URL slugs.
+- Add meta keywords and author tags: `<meta name="author" content="...">`
+- Set a favicon.
+- Compress images and other resources.
+- Remove unused HTML/CSS/JS and compress them.
+- Add alt text to images: `<img src="image.jpg" alt="description">`
+
+This guide provides a foundational understanding of HTML, CSS, and JavaScript, along with practical examples and exercises to reinforce learning.

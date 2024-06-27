@@ -494,7 +494,7 @@ Web safe fonts are universally installed across browsers, ensuring consistency.
 To use custom Google Fonts, go to Google Fonts, select a style, and paste the provided link into the `<head>` section of your HTML. Then, use the font in your CSS.
 
 ```html
-<!-- Example of adding Google Fonts -->
+<!-- Example of adding Google Fonts in HTML -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 ```
 

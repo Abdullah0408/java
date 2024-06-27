@@ -422,6 +422,13 @@ Used to list ordered items.
   </tbody>
 </table>
 ```
+- **`<table>`**: Defines a table.
+- **`<caption>`**: Optional element for providing a caption to the table.
+- **`<thead>`**: The header section of the table, typically containing column headers (`<th>` elements).
+- **`<th>`**: Defines a header cell within the `<thead>`, typically used for column headings.
+- **`<tbody>`**: The body section of the table, containing the main content (`<tr>` elements).
+- **`<tr>`**: Defines a row in the table.
+- **`<td>`**: Defines a standard data cell within a `<tr>`, used for displaying data.
 
 ### Colspan and Rowspan
 
@@ -456,6 +463,9 @@ Used to list ordered items.
 |                   |      Cell 6       |
 +-------------------+-------------------+
 ```
+- **`colspan="2"`**: Indicates that the cell spans across 2 columns horizontally.
+- **`rowspan="2"`**: Indicates that the cell spans across 2 rows vertically.
+
 ## Forms
 
 ### Basic Form Structure

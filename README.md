@@ -629,3 +629,107 @@ Element with z-index: 5 (underneath)
 2. Experiment with different `position` values and observe how elements are placed.
 3. Create a list with custom list styles.
 4. Use `z-index` to layer elements and observe the stacking order.
+
+### Lists in CSS
+
+Lists are a fundamental part of HTML and CSS. There are two main types of lists:
+
+1. **Unordered Lists (`<ul>`)**: Typically used for items without a specific order. List items are marked with bullets.
+2. **Ordered Lists (`<ol>`)**: Used for items with a specific sequence. List items are marked with numbers or letters.
+
+#### Creating Lists
+
+**Unordered List Example:**
+
+```html
+<ul>
+   <li>Item 1</li>
+   <li>Item 2</li>
+   <li>Item 3</li>
+</ul>
+```
+
+**Ordered List Example:**
+
+```html
+<ol>
+   <li>First item</li>
+   <li>Second item</li>
+   <li>Third item</li>
+</ol>
+```
+
+#### Customizing List Styles
+
+You can customize the list style using the `list-style-type` property.
+
+**List Style Types:**
+
+- `disc`: Default for unordered lists (•)
+- `circle`: Hollow circles (○)
+- `square`: Solid squares (■)
+- `decimal`: Default for ordered lists (1, 2, 3, ...)
+- `lower-alpha`: Lowercase letters (a, b, c, ...)
+- `upper-alpha`: Uppercase letters (A, B, C, ...)
+
+**Example:**
+
+```css
+ul {
+   list-style-type: square;
+}
+
+ol {
+   list-style-type: lower-alpha;
+}
+```
+
+#### Positioning List Items
+
+You can also change the position of the list marker using `list-style-position`.
+
+- `inside`: The marker is inside the list item.
+- `outside`: The marker is outside the list item (default).
+
+**Example:**
+
+```css
+ul {
+   list-style-position: inside;
+}
+```
+
+### Diagrams
+
+#### List Types Diagram:
+
+```
+Unordered List (ul)
+• Item 1
+• Item 2
+• Item 3
+
+Ordered List (ol)
+1. Item 1
+2. Item 2
+3. Item 3
+```
+
+#### List-Style Diagram:
+
+```
+list-style: square inside;
+• Item 1 (Square bullet inside the content area)
+• Item 2
+• Item 3
+```
+
+### List-Style Property
+
+The `list-style` property is a shorthand for setting `list-style-type`, `list-style-position`, and `list-style-image`.
+
+```css
+ul {
+   list-style: square inside url('img.jpg'); /* type, position, image */
+}
+```
